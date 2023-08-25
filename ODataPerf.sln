@@ -14,6 +14,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{BE7A0FDB-0
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Results", "Results", "{01B01B65-493D-4855-A03D-F6E43F6C9345}"
+	ProjectSection(SolutionItems) = preProject
+		Tests\Results\odata-queryable-results.json = Tests\Results\odata-queryable-results.json
+		Tests\Results\odata-queryable-with-select-results.json = Tests\Results\odata-queryable-with-select-results.json
+		Tests\Results\odata-results.json = Tests\Results\odata-results.json
+		Tests\Results\plain-results.json = Tests\Results\plain-results.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,5 +35,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{86E89925-85D9-4E64-914B-B11C4A342EB7} = {BB9BB0A3-1D83-49FE-8253-9C6CFE3371DE}
+		{01B01B65-493D-4855-A03D-F6E43F6C9345} = {BCA6A1A9-35C7-40E3-8813-4456CB7C05C9}
 	EndGlobalSection
 EndGlobal

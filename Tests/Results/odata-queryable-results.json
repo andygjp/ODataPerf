@@ -1,0 +1,652 @@
+{
+  "returnCode": 0,
+  "jobResults": {
+    "jobs": {
+      "application": {
+        "results": {
+          "netSdkVersion": "7.0.400",
+          "aspNetCoreVersion": "7.0.10+5a4c82ec57fa",
+          "netCoreAppVersion": "7.0.10+a6dbb800a477",
+          "benchmarks/build-time": 1553.0,
+          "benchmarks/published-size": 107782.0,
+          "benchmarks/symbols-size": 22.0,
+          "benchmarks/start-time": 961.0
+        },
+        "metadata": [
+          {
+            "name": "benchmarks/cpu",
+            "description": "Max CPU Usage (%)",
+            "format": "n0"
+          },
+          {
+            "name": "benchmarks/cpu/raw",
+            "description": "Max Cores usage (%)",
+            "format": "n0"
+          },
+          {
+            "name": "benchmarks/working-set",
+            "description": "Max Working Set (MB)",
+            "format": "n0"
+          },
+          {
+            "name": "benchmarks/private-memory",
+            "description": "Max Private Memory (MB)",
+            "format": "n0"
+          },
+          {
+            "name": "benchmarks/build-time",
+            "description": "Build Time (ms)",
+            "format": "n0"
+          },
+          {
+            "name": "benchmarks/start-time",
+            "description": "Start Time (ms)",
+            "format": "n0"
+          },
+          {
+            "name": "benchmarks/published-size",
+            "description": "Published Size (KB)",
+            "format": "n0"
+          },
+          {
+            "name": "benchmarks/published-nativeaot-size/raw",
+            "description": "Native Aot Size summary",
+            "format": "json"
+          },
+          {
+            "name": "benchmarks/symbols-size",
+            "description": "Symbols Size (KB)",
+            "format": "n0"
+          },
+          {
+            "name": "benchmarks/memory/swap",
+            "description": "Swap (MB)",
+            "format": "n0"
+          },
+          {
+            "name": "benchmarks/cpu/periods/total",
+            "description": "Runnable Periods (#)",
+            "format": "n0"
+          },
+          {
+            "name": "benchmarks/cpu/periods/throttled",
+            "description": "Throttled Periods (#)",
+            "format": "n0"
+          },
+          {
+            "name": "benchmarks/cpu/throttled",
+            "description": "Throttled Time (ns)",
+            "format": "n0"
+          },
+          {
+            "name": "netSdkVersion",
+            "description": ".NET Core SDK Version",
+            "format": ""
+          },
+          {
+            "name": "AspNetCoreVersion",
+            "description": "ASP.NET Core Version",
+            "format": ""
+          },
+          {
+            "name": "NetCoreAppVersion",
+            "description": ".NET Runtime Version",
+            "format": ""
+          }
+        ],
+        "dependencies": [],
+        "measurements": [
+          [
+            {
+              "timestamp": "2023-08-25T17:54:00.11772Z",
+              "name": "netSdkVersion",
+              "value": "7.0.400"
+            },
+            {
+              "timestamp": "2023-08-25T17:54:00.117807Z",
+              "name": "AspNetCoreVersion",
+              "value": "7.0.10+5a4c82ec57fa"
+            },
+            {
+              "timestamp": "2023-08-25T17:54:00.117847Z",
+              "name": "NetCoreAppVersion",
+              "value": "7.0.10+a6dbb800a477"
+            },
+            {
+              "timestamp": "2023-08-25T17:54:01.671646Z",
+              "name": "benchmarks/build-time",
+              "value": 1553
+            },
+            {
+              "timestamp": "2023-08-25T17:54:01.674429Z",
+              "name": "benchmarks/published-size",
+              "value": 107782
+            },
+            {
+              "timestamp": "2023-08-25T17:54:01.676804Z",
+              "name": "benchmarks/symbols-size",
+              "value": 22
+            },
+            {
+              "timestamp": "2023-08-25T17:54:02.63898Z",
+              "name": "benchmarks/start-time",
+              "value": 961
+            }
+          ]
+        ],
+        "environment": {
+          "hw": "Unspecified",
+          "env": "Unspecified",
+          "os": "OSX",
+          "arch": "Arm64",
+          "proc": 10
+        },
+        "variables": {
+          "headers": {
+            "none": "",
+            "plaintext": "--header \"Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7\" --header \"Connection: keep-alive\"",
+            "html": "--header \"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\" --header \"Connection: keep-alive\"",
+            "json": "--header \"Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7\" --header \"Connection: keep-alive\"",
+            "connectionclose": "--header \"Connection: close\""
+          },
+          "presetHeaders": "none",
+          "serverAddress": "localhost"
+        },
+        "benchmarks": []
+      },
+      "load": {
+        "results": {
+          "netSdkVersion": "7.0.400",
+          "aspNetCoreVersion": "7.0.10+5a4c82ec57fa",
+          "netCoreAppVersion": "7.0.10+a6dbb800a477",
+          "benchmarks/build-time": 1402.0,
+          "benchmarks/published-size": 78872.0,
+          "benchmarks/symbols-size": 0.0,
+          "benchmarks/start-time": 191.0,
+          "http/firstrequest": 205.0,
+          "bombardier/badresponses": 0.0,
+          "bombardier/latency/50": 2.988,
+          "bombardier/latency/75": 3.761,
+          "bombardier/latency/90": 4.883,
+          "bombardier/latency/95": 5.94,
+          "bombardier/latency/99": 11.619,
+          "bombardier/latency/mean": 3.396922311460394,
+          "bombardier/latency/max": 80.47,
+          "bombardier/rps/max": 85836.40103620186,
+          "bombardier/rps/mean": 75296.22883878829,
+          "bombardier/throughput": 41.78485561296976,
+          "bombardier/raw": [
+            {
+              "spec": {
+                "numberOfConnections": 256,
+                "testType": "timed",
+                "testDurationSeconds": 15,
+                "method": "GET",
+                "url": "http://localhost:5005/ODataWeatherForecast/Queryable",
+                "body": "",
+                "stream": false,
+                "timeoutSeconds": 2,
+                "client": "fasthttp"
+              },
+              "result": {
+                "bytesRead": 657385341,
+                "bytesWritten": 103964876,
+                "timeTakenSeconds": 15.003797584,
+                "req1xx": 0,
+                "req2xx": 1129935,
+                "req3xx": 0,
+                "req4xx": 0,
+                "req5xx": 0,
+                "others": 0,
+                "latency": {
+                  "mean": 3396.9223114603938,
+                  "stddev": 1709.174579056463,
+                  "max": 80470,
+                  "percentiles": {
+                    "50": 2988,
+                    "75": 3761,
+                    "90": 4883,
+                    "95": 5940,
+                    "99": 11619
+                  }
+                },
+                "rps": {
+                  "mean": 75296.22883878829,
+                  "stddev": 4653.449292981313,
+                  "max": 85836.40103620186,
+                  "percentiles": {
+                    "50": 75665.752858,
+                    "75": 78456.873392,
+                    "90": 80293.292862,
+                    "95": 81805.01764,
+                    "99": 83619.564469
+                  }
+                }
+              }
+            }
+          ],
+          "bombardier/requests": 1129935.0,
+          "http/requests": 1129935.0,
+          "http/requests/badresponses": 0.0,
+          "http/latency/50": 2.988,
+          "http/latency/75": 3.761,
+          "http/latency/90": 4.883,
+          "http/latency/95": 5.94,
+          "http/latency/99": 11.619,
+          "http/latency/mean": 3.396922311460394,
+          "http/latency/max": 80.47,
+          "http/rps/max": 85836.40103620186,
+          "http/rps/mean": 75296.22883878829,
+          "http/throughput": 41.78485561296976
+        },
+        "metadata": [
+          {
+            "name": "benchmarks/cpu",
+            "description": "Max CPU Usage (%)",
+            "format": "n0"
+          },
+          {
+            "name": "benchmarks/cpu/raw",
+            "description": "Max Cores usage (%)",
+            "format": "n0"
+          },
+          {
+            "name": "benchmarks/working-set",
+            "description": "Max Working Set (MB)",
+            "format": "n0"
+          },
+          {
+            "name": "benchmarks/private-memory",
+            "description": "Max Private Memory (MB)",
+            "format": "n0"
+          },
+          {
+            "name": "benchmarks/build-time",
+            "description": "Build Time (ms)",
+            "format": "n0"
+          },
+          {
+            "name": "benchmarks/start-time",
+            "description": "Start Time (ms)",
+            "format": "n0"
+          },
+          {
+            "name": "benchmarks/published-size",
+            "description": "Published Size (KB)",
+            "format": "n0"
+          },
+          {
+            "name": "benchmarks/published-nativeaot-size/raw",
+            "description": "Native Aot Size summary",
+            "format": "json"
+          },
+          {
+            "name": "benchmarks/symbols-size",
+            "description": "Symbols Size (KB)",
+            "format": "n0"
+          },
+          {
+            "name": "benchmarks/memory/swap",
+            "description": "Swap (MB)",
+            "format": "n0"
+          },
+          {
+            "name": "benchmarks/cpu/periods/total",
+            "description": "Runnable Periods (#)",
+            "format": "n0"
+          },
+          {
+            "name": "benchmarks/cpu/periods/throttled",
+            "description": "Throttled Periods (#)",
+            "format": "n0"
+          },
+          {
+            "name": "benchmarks/cpu/throttled",
+            "description": "Throttled Time (ns)",
+            "format": "n0"
+          },
+          {
+            "name": "netSdkVersion",
+            "description": ".NET Core SDK Version",
+            "format": ""
+          },
+          {
+            "name": "AspNetCoreVersion",
+            "description": "ASP.NET Core Version",
+            "format": ""
+          },
+          {
+            "name": "NetCoreAppVersion",
+            "description": ".NET Runtime Version",
+            "format": ""
+          },
+          {
+            "name": "http/firstrequest",
+            "description": "First Request (ms)",
+            "format": "n0"
+          },
+          {
+            "name": "http/requests",
+            "description": "Requests",
+            "format": "n0"
+          },
+          {
+            "name": "http/requests/badresponses",
+            "description": "Bad responses",
+            "format": "n0"
+          },
+          {
+            "name": "http/latency/50",
+            "description": "Latency 50th (ms)",
+            "format": "n2"
+          },
+          {
+            "name": "http/latency/75",
+            "description": "Latency 75th (ms)",
+            "format": "n2"
+          },
+          {
+            "name": "http/latency/90",
+            "description": "Latency 90th (ms)",
+            "format": "n2"
+          },
+          {
+            "name": "http/latency/95",
+            "description": "Latency 95th (ms)",
+            "format": "n2"
+          },
+          {
+            "name": "http/latency/99",
+            "description": "Latency 99th (ms)",
+            "format": "n2"
+          },
+          {
+            "name": "http/latency/mean",
+            "description": "Mean latency (ms)",
+            "format": "n2"
+          },
+          {
+            "name": "http/latency/max",
+            "description": "Max latency (ms)",
+            "format": "n2"
+          },
+          {
+            "name": "http/rps/mean",
+            "description": "Requests/sec",
+            "format": "n0"
+          },
+          {
+            "name": "http/rps/max",
+            "description": "Requests/sec (max)",
+            "format": "n0"
+          },
+          {
+            "name": "http/throughput",
+            "description": "Read throughput (MB/s)",
+            "format": "n2"
+          },
+          {
+            "name": "bombardier/raw",
+            "description": "Raw results",
+            "format": "object"
+          }
+        ],
+        "dependencies": [],
+        "measurements": [
+          [
+            {
+              "timestamp": "2023-08-25T17:54:07.423559Z",
+              "name": "netSdkVersion",
+              "value": "7.0.400"
+            },
+            {
+              "timestamp": "2023-08-25T17:54:07.423664Z",
+              "name": "AspNetCoreVersion",
+              "value": "7.0.10+5a4c82ec57fa"
+            },
+            {
+              "timestamp": "2023-08-25T17:54:07.423721Z",
+              "name": "NetCoreAppVersion",
+              "value": "7.0.10+a6dbb800a477"
+            },
+            {
+              "timestamp": "2023-08-25T17:54:08.826746Z",
+              "name": "benchmarks/build-time",
+              "value": 1402
+            },
+            {
+              "timestamp": "2023-08-25T17:54:08.828622Z",
+              "name": "benchmarks/published-size",
+              "value": 78872
+            },
+            {
+              "timestamp": "2023-08-25T17:54:08.82981Z",
+              "name": "benchmarks/symbols-size",
+              "value": 0
+            },
+            {
+              "timestamp": "2023-08-25T17:54:09.028377Z",
+              "name": "benchmarks/start-time",
+              "value": 191
+            },
+            {
+              "timestamp": "2023-08-25T17:54:09.2416096Z",
+              "name": "http/firstrequest",
+              "value": 205
+            },
+            {
+              "timestamp": "2023-08-25T17:54:39.4774825Z",
+              "name": "bombardier/requests",
+              "value": 1129935
+            },
+            {
+              "timestamp": "2023-08-25T17:54:39.4774825Z",
+              "name": "http/requests",
+              "value": 1129935
+            },
+            {
+              "timestamp": "2023-08-25T17:54:39.4774964Z",
+              "name": "bombardier/badresponses",
+              "value": 0
+            },
+            {
+              "timestamp": "2023-08-25T17:54:39.4774964Z",
+              "name": "http/requests/badresponses",
+              "value": 0
+            },
+            {
+              "timestamp": "2023-08-25T17:54:39.477859Z",
+              "name": "bombardier/latency/50",
+              "value": 2.988
+            },
+            {
+              "timestamp": "2023-08-25T17:54:39.477859Z",
+              "name": "http/latency/50",
+              "value": 2.988
+            },
+            {
+              "timestamp": "2023-08-25T17:54:39.4778769Z",
+              "name": "bombardier/latency/75",
+              "value": 3.761
+            },
+            {
+              "timestamp": "2023-08-25T17:54:39.4778769Z",
+              "name": "http/latency/75",
+              "value": 3.761
+            },
+            {
+              "timestamp": "2023-08-25T17:54:39.4778908Z",
+              "name": "bombardier/latency/90",
+              "value": 4.883
+            },
+            {
+              "timestamp": "2023-08-25T17:54:39.4778908Z",
+              "name": "http/latency/90",
+              "value": 4.883
+            },
+            {
+              "timestamp": "2023-08-25T17:54:39.4779047Z",
+              "name": "bombardier/latency/95",
+              "value": 5.94
+            },
+            {
+              "timestamp": "2023-08-25T17:54:39.4779047Z",
+              "name": "http/latency/95",
+              "value": 5.94
+            },
+            {
+              "timestamp": "2023-08-25T17:54:39.4779204Z",
+              "name": "bombardier/latency/99",
+              "value": 11.619
+            },
+            {
+              "timestamp": "2023-08-25T17:54:39.4779204Z",
+              "name": "http/latency/99",
+              "value": 11.619
+            },
+            {
+              "timestamp": "2023-08-25T17:54:39.4779338Z",
+              "name": "bombardier/latency/mean",
+              "value": 3.396922311460394
+            },
+            {
+              "timestamp": "2023-08-25T17:54:39.4779338Z",
+              "name": "http/latency/mean",
+              "value": 3.396922311460394
+            },
+            {
+              "timestamp": "2023-08-25T17:54:39.4779473Z",
+              "name": "bombardier/latency/max",
+              "value": 80.47
+            },
+            {
+              "timestamp": "2023-08-25T17:54:39.4779473Z",
+              "name": "http/latency/max",
+              "value": 80.47
+            },
+            {
+              "timestamp": "2023-08-25T17:54:39.4779607Z",
+              "name": "bombardier/rps/max",
+              "value": 85836.40103620186
+            },
+            {
+              "timestamp": "2023-08-25T17:54:39.4779607Z",
+              "name": "http/rps/max",
+              "value": 85836.40103620186
+            },
+            {
+              "timestamp": "2023-08-25T17:54:39.4779739Z",
+              "name": "bombardier/rps/mean",
+              "value": 75296.22883878829
+            },
+            {
+              "timestamp": "2023-08-25T17:54:39.4779739Z",
+              "name": "http/rps/mean",
+              "value": 75296.22883878829
+            },
+            {
+              "timestamp": "2023-08-25T17:54:39.4780245Z",
+              "name": "bombardier/raw",
+              "value": {
+                "spec": {
+                  "numberOfConnections": 256,
+                  "testType": "timed",
+                  "testDurationSeconds": 15,
+                  "method": "GET",
+                  "url": "http://localhost:5005/ODataWeatherForecast/Queryable",
+                  "body": "",
+                  "stream": false,
+                  "timeoutSeconds": 2,
+                  "client": "fasthttp"
+                },
+                "result": {
+                  "bytesRead": 657385341,
+                  "bytesWritten": 103964876,
+                  "timeTakenSeconds": 15.003797584,
+                  "req1xx": 0,
+                  "req2xx": 1129935,
+                  "req3xx": 0,
+                  "req4xx": 0,
+                  "req5xx": 0,
+                  "others": 0,
+                  "latency": {
+                    "mean": 3396.9223114603938,
+                    "stddev": 1709.174579056463,
+                    "max": 80470,
+                    "percentiles": {
+                      "50": 2988,
+                      "75": 3761,
+                      "90": 4883,
+                      "95": 5940,
+                      "99": 11619
+                    }
+                  },
+                  "rps": {
+                    "mean": 75296.22883878829,
+                    "stddev": 4653.449292981313,
+                    "max": 85836.40103620186,
+                    "percentiles": {
+                      "50": 75665.752858,
+                      "75": 78456.873392,
+                      "90": 80293.292862,
+                      "95": 81805.01764,
+                      "99": 83619.564469
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "timestamp": "2023-08-25T17:54:39.4780391Z",
+              "name": "bombardier/throughput",
+              "value": 41.78485561296976
+            },
+            {
+              "timestamp": "2023-08-25T17:54:39.4780391Z",
+              "name": "http/throughput",
+              "value": 41.78485561296976
+            }
+          ]
+        ],
+        "environment": {
+          "hw": "Unspecified",
+          "env": "Unspecified",
+          "os": "OSX",
+          "arch": "Arm64",
+          "proc": 10
+        },
+        "variables": {
+          "headers": {
+            "none": "",
+            "plaintext": "--header \"Accept: text/plain,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7\" --header \"Connection: keep-alive\"",
+            "html": "--header \"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\" --header \"Connection: keep-alive\"",
+            "json": "--header \"Accept: application/json,text/html;q=0.9,application/xhtml+xml;q=0.9,application/xml;q=0.8,*/*;q=0.7\" --header \"Connection: keep-alive\"",
+            "connectionclose": "--header \"Connection: close\""
+          },
+          "presetHeaders": "none",
+          "connections": 256,
+          "warmup": 15,
+          "duration": 15,
+          "requests": 0,
+          "timeout": 2,
+          "rate": 0,
+          "transport": "fasthttp",
+          "serverScheme": "http",
+          "serverAddress": "localhost",
+          "serverPort": 5005,
+          "path": "/ODataWeatherForecast/Queryable",
+          "body": null,
+          "bodyFile": null,
+          "certFile": null,
+          "keyFile": null,
+          "stream": null,
+          "verb": null,
+          "customHeaders": []
+        },
+        "benchmarks": []
+      }
+    },
+    "properties": {}
+  },
+  "benchmarks": []
+}
