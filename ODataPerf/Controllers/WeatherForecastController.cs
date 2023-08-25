@@ -1,12 +1,12 @@
-using Microsoft.AspNetCore.Mvc;
-
 namespace ODataPerf.Controllers;
+
+using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
-    [HttpGet(Name = "GetWeatherForecast")]
+    [HttpGet]
     public IEnumerable<WeatherForecast> Get()
     {
         return Data.Get();

@@ -1,0 +1,55 @@
+imports:
+  - https://raw.githubusercontent.com/dotnet/crank/main/src/Microsoft.Crank.Jobs.Bombardier/bombardier.yml
+
+jobs:
+  server:
+    source:
+      localFolder: ../ODataPerf
+      project: ODataPerf.csproj
+    readyStateText: Application started.
+
+scenarios:
+  plain:
+    application:
+      job: server
+    load:
+      job: bombardier
+      variables:
+        serverPort: 5005
+        path: /WeatherForecast
+  odata:
+    application:
+      job: server
+    load:
+      job: bombardier
+      variables:
+        serverPort: 5005
+        path: /ODataWeatherForecast
+  odata-queryable:
+    application:
+      job: server
+    load:
+      job: bombardier
+      variables:
+        serverPort: 5005
+        path: /ODataWeatherForecast/Queryable
+  odata-queryable-with-select:
+    application:
+      job: server
+    load:
+      job: bombardier
+      variables:
+        serverPort: 5005
+        path: /ODataWeatherForecast/Queryable?$select=Id
+
+profiles:
+  local:
+    variables:
+      serverAddress: localhost
+    jobs: 
+      application:
+        endpoints: 
+          - http://localhost:5010
+      load:
+        endpoints: 
+          - http://localhost:5010

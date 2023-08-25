@@ -1,1 +1,8 @@
-GET http://localhost:5264/WeatherForecast
+### normal asp.net core controller
+GET http://localhost:5005/WeatherForecast
+
+### odata controller - endpoint does not support querying
+GET http://localhost:5005/ODataWeatherForecast?$select=Id
+
+### odata controller - same controller, but this endpoint supports querying
+GET http://localhost:5005/ODataWeatherForecast/Queryable?$select=Id
