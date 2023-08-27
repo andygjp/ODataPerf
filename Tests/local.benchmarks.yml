@@ -1,6 +1,5 @@
 imports:
   - https://raw.githubusercontent.com/dotnet/crank/main/src/Microsoft.Crank.Jobs.Bombardier/bombardier.yml
-#  - /Users/andrewpattison/Code/crank/src/Microsoft.Crank.Jobs.Bombardier/bombardier.yml
 
 jobs:
   server:
@@ -38,6 +37,31 @@ scenarios:
       job: bombardier
       variables:
         path: /ODataWeatherForecastWithQuery?$select=Id
+  odata-paged:
+    application:
+      job: server
+    load:
+      job: bombardier
+      variables:
+        path: /ODataWeatherForecastWithPaging
+  odata-paged-max:
+    application:
+      job: server
+    load:
+      job: bombardier
+      variables:
+        path: /ODataWeatherForecastWithPaging
+        customHeaders:
+          - 'Prefer: maxpagesize=3'
+  odata-paged-max-and-select:
+    application:
+      job: server
+    load:
+      job: bombardier
+      variables:
+        path: /ODataWeatherForecastWithPaging?$select=Id
+        customHeaders:
+          - 'Prefer: maxpagesize=3'
 
 profiles:
   local:

@@ -27,3 +27,18 @@ crank --config Tests/local.benchmarks.yml --scenario odata-queryable --profile l
 # odata asp.net core controller that supports querying with $select
 crank --config Tests/local.benchmarks.yml --scenario odata-queryable-with-select --profile local --json Tests/Results/odata-queryable-with-select-results.json
 ```
+
+```shell
+# odata asp.net core controller that returns paged result
+crank --config Tests/local.benchmarks.yml --scenario odata-paged --profile local --json Tests/Results/odata-paged-results.json
+```
+
+```shell
+# odata asp.net core controller that returns paged result
+crank --config Tests/local.benchmarks.yml --scenario odata-paged-max --profile local --json Tests/Results/odata-paged-max-results.json
+```
+
+```shell
+# odata asp.net core controller that returns paged result
+crank --config Tests/local.benchmarks.yml --scenario odata-paged-max-and-select --profile local --json Tests/Results/odata-paged-max-and-select-results.json
+```

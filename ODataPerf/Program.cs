@@ -13,6 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 var modelBuilder = new ODataConventionModelBuilder();
 modelBuilder.EntitySet<WeatherForecast>("ODataWeatherForecast");
 modelBuilder.EntitySet<WeatherForecast>("ODataWeatherForecastWithQuery");
+modelBuilder.EntitySet<WeatherForecast>("ODataWeatherForecastWithPaging");
 var edmModel = modelBuilder.GetEdmModel();
 
 #if USE_OPTIMISATIONS

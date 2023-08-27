@@ -7,11 +7,30 @@ GET http://localhost:5005/$odata
 ### normal asp.net core controller
 GET http://localhost:5005/WeatherForecast
 
-### odata controller - endpoint does not support querying
+### odata controller
+GET http://localhost:5005/ODataWeatherForecast
+
+### odata controller
 GET http://localhost:5005/ODataWeatherForecast?$select=Id
 
-### odata controller - but this endpoint supports querying
+### odata controller
 GET http://localhost:5005/ODataWeatherForecastWithQuery
 
-### odata controller - same controller, but this endpoint supports querying
+### odata controller
 GET http://localhost:5005/ODataWeatherForecastWithQuery?$select=Id
+
+### odata controller
+GET http://localhost:5005/ODataWeatherForecastWithQuery?$select=Id
+Prefer: maxpagesize=3
+
+### odata controller
+GET http://localhost:5005/ODataWeatherForecastWithPaging
+
+### odata controller
+GET http://localhost:5005/ODataWeatherForecastWithPaging
+Prefer: maxpagesize=3
+
+### odata controller
+GET http://localhost:5005/ODataWeatherForecastWithPaging?$select=Id
+Prefer: maxpagesize=3
+

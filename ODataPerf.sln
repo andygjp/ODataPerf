@@ -20,6 +20,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Results", "Results", "{01B0
 		Tests\Results\odata-queryable-with-select-results.json = Tests\Results\odata-queryable-with-select-results.json
 		Tests\Results\odata-results.json = Tests\Results\odata-results.json
 		Tests\Results\plain-results.json = Tests\Results\plain-results.json
+		Tests\Results\odata-paged-max-and-select-results.json = Tests\Results\odata-paged-max-and-select-results.json
+		Tests\Results\odata-paged-max-results.json = Tests\Results\odata-paged-max-results.json
+		Tests\Results\odata-paged-results.json = Tests\Results\odata-paged-results.json
 	EndProjectSection
 EndProject
 Global
