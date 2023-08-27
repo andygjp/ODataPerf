@@ -1,8 +1,17 @@
+### odata metadate
+GET http://localhost:5005/$metadata?$format=json
+
+### odata routes
+GET http://localhost:5005/$odata
+
 ### normal asp.net core controller
 GET http://localhost:5005/WeatherForecast
 
 ### odata controller - endpoint does not support querying
 GET http://localhost:5005/ODataWeatherForecast?$select=Id
 
+### odata controller - but this endpoint supports querying
+GET http://localhost:5005/ODataWeatherForecastWithQuery
+
 ### odata controller - same controller, but this endpoint supports querying
-GET http://localhost:5005/ODataWeatherForecast/Queryable?$select=Id
+GET http://localhost:5005/ODataWeatherForecastWithQuery?$select=Id

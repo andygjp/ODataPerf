@@ -7,10 +7,10 @@
           "netSdkVersion": "7.0.400",
           "aspNetCoreVersion": "7.0.10+5a4c82ec57fa",
           "netCoreAppVersion": "7.0.10+a6dbb800a477",
-          "benchmarks/build-time": 1518.0,
-          "benchmarks/published-size": 107782.0,
-          "benchmarks/symbols-size": 22.0,
-          "benchmarks/start-time": 1016.0
+          "benchmarks/build-time": 1477.0,
+          "benchmarks/published-size": 107781.0,
+          "benchmarks/symbols-size": 21.0,
+          "benchmarks/start-time": 888.0
         },
         "metadata": [
           {
@@ -98,39 +98,39 @@
         "measurements": [
           [
             {
-              "timestamp": "2023-08-25T17:55:20.320064Z",
+              "timestamp": "2023-08-27T07:39:49.534276Z",
               "name": "netSdkVersion",
               "value": "7.0.400"
             },
             {
-              "timestamp": "2023-08-25T17:55:20.32017Z",
+              "timestamp": "2023-08-27T07:39:49.534382Z",
               "name": "AspNetCoreVersion",
               "value": "7.0.10+5a4c82ec57fa"
             },
             {
-              "timestamp": "2023-08-25T17:55:20.320218Z",
+              "timestamp": "2023-08-27T07:39:49.534453Z",
               "name": "NetCoreAppVersion",
               "value": "7.0.10+a6dbb800a477"
             },
             {
-              "timestamp": "2023-08-25T17:55:21.838575Z",
+              "timestamp": "2023-08-27T07:39:51.012284Z",
               "name": "benchmarks/build-time",
-              "value": 1518
+              "value": 1477
             },
             {
-              "timestamp": "2023-08-25T17:55:21.841215Z",
+              "timestamp": "2023-08-27T07:39:51.015093Z",
               "name": "benchmarks/published-size",
-              "value": 107782
+              "value": 107781
             },
             {
-              "timestamp": "2023-08-25T17:55:21.843021Z",
+              "timestamp": "2023-08-27T07:39:51.01707Z",
               "name": "benchmarks/symbols-size",
-              "value": 22
+              "value": 21
             },
             {
-              "timestamp": "2023-08-25T17:55:22.860195Z",
+              "timestamp": "2023-08-27T07:39:51.906062Z",
               "name": "benchmarks/start-time",
-              "value": 1016
+              "value": 888
             }
           ]
         ],
@@ -150,7 +150,10 @@
             "connectionclose": "--header \"Connection: close\""
           },
           "presetHeaders": "none",
-          "serverAddress": "localhost"
+          "serverAddress": "localhost",
+          "serverPort": 5005,
+          "warmup": 30,
+          "duration": 120
         },
         "benchmarks": []
       },
@@ -159,85 +162,85 @@
           "netSdkVersion": "7.0.400",
           "aspNetCoreVersion": "7.0.10+5a4c82ec57fa",
           "netCoreAppVersion": "7.0.10+a6dbb800a477",
-          "benchmarks/build-time": 1400.0,
+          "benchmarks/build-time": 1348.0,
           "benchmarks/published-size": 78872.0,
           "benchmarks/symbols-size": 0.0,
-          "benchmarks/start-time": 180.0,
-          "http/firstrequest": 230.0,
+          "benchmarks/start-time": 172.0,
+          "http/firstrequest": 241.0,
           "bombardier/badresponses": 0.0,
-          "bombardier/latency/50": 42.463,
-          "bombardier/latency/75": 45.662,
-          "bombardier/latency/90": 49.049,
-          "bombardier/latency/95": 51.57,
-          "bombardier/latency/99": 62.191,
-          "bombardier/latency/mean": 42.12997280573018,
-          "bombardier/latency/max": 121.766,
-          "bombardier/rps/max": 15126.521617233802,
-          "bombardier/rps/mean": 6137.211234788931,
-          "bombardier/throughput": 1.187244958823942,
+          "bombardier/latency/50": 27.928,
+          "bombardier/latency/75": 30.153,
+          "bombardier/latency/90": 32.627,
+          "bombardier/latency/95": 34.521,
+          "bombardier/latency/99": 40.154,
+          "bombardier/latency/mean": 27.625774544990193,
+          "bombardier/latency/max": 180.544,
+          "bombardier/rps/max": 18234.727057373715,
+          "bombardier/rps/mean": 9313.259654978587,
+          "bombardier/throughput": 3.2341360642360355,
           "bombardier/raw": [
             {
               "spec": {
                 "numberOfConnections": 256,
                 "testType": "timed",
-                "testDurationSeconds": 15,
+                "testDurationSeconds": 120,
                 "method": "GET",
-                "url": "http://localhost:5005/ODataWeatherForecast/Queryable?$select=Id",
+                "url": "http://localhost:5005/ODataWeatherForecastWithQuery?$select=Id",
                 "body": "",
                 "stream": false,
                 "timeoutSeconds": 2,
                 "client": "fasthttp"
               },
               "result": {
-                "bytesRead": 18717730,
-                "bytesWritten": 9417702,
-                "timeTakenSeconds": 15.035328834,
+                "bytesRead": 406995294,
+                "bytesWritten": 113437974,
+                "timeTakenSeconds": 120.0138,
                 "req1xx": 0,
-                "req2xx": 91306,
+                "req2xx": 1112009,
                 "req3xx": 0,
                 "req4xx": 0,
                 "req5xx": 0,
                 "others": 0,
                 "latency": {
-                  "mean": 42129.97280573018,
-                  "stddev": 6154.862859610623,
-                  "max": 121766,
+                  "mean": 27625.774544990192,
+                  "stddev": 2652.1891629164547,
+                  "max": 180544,
                   "percentiles": {
-                    "50": 42463,
-                    "75": 45662,
-                    "90": 49049,
-                    "95": 51570,
-                    "99": 62191
+                    "50": 27928,
+                    "75": 30153,
+                    "90": 32627,
+                    "95": 34521,
+                    "99": 40154
                   }
                 },
                 "rps": {
-                  "mean": 6137.211234788931,
-                  "stddev": 3635.528747801915,
-                  "max": 15126.521617233802,
+                  "mean": 9313.259654978587,
+                  "stddev": 3624.3869110904125,
+                  "max": 18234.727057373715,
                   "percentiles": {
-                    "50": 6034.995615,
-                    "75": 9253.643622,
-                    "90": 11718.699405,
-                    "95": 12986.596344,
-                    "99": 13867.267701
+                    "50": 9944.107833,
+                    "75": 12529.143987,
+                    "90": 13268.775213,
+                    "95": 13964.814631,
+                    "99": 15255.653112
                   }
                 }
               }
             }
           ],
-          "bombardier/requests": 91306.0,
-          "http/requests": 91306.0,
+          "bombardier/requests": 1112009.0,
+          "http/requests": 1112009.0,
           "http/requests/badresponses": 0.0,
-          "http/latency/50": 42.463,
-          "http/latency/75": 45.662,
-          "http/latency/90": 49.049,
-          "http/latency/95": 51.57,
-          "http/latency/99": 62.191,
-          "http/latency/mean": 42.12997280573018,
-          "http/latency/max": 121.766,
-          "http/rps/max": 15126.521617233802,
-          "http/rps/mean": 6137.211234788931,
-          "http/throughput": 1.187244958823942
+          "http/latency/50": 27.928,
+          "http/latency/75": 30.153,
+          "http/latency/90": 32.627,
+          "http/latency/95": 34.521,
+          "http/latency/99": 40.154,
+          "http/latency/mean": 27.625774544990193,
+          "http/latency/max": 180.544,
+          "http/rps/max": 18234.727057373715,
+          "http/rps/mean": 9313.259654978587,
+          "http/throughput": 3.2341360642360355
         },
         "metadata": [
           {
@@ -395,216 +398,216 @@
         "measurements": [
           [
             {
-              "timestamp": "2023-08-25T17:55:27.440666Z",
+              "timestamp": "2023-08-27T07:39:57.872826Z",
               "name": "netSdkVersion",
               "value": "7.0.400"
             },
             {
-              "timestamp": "2023-08-25T17:55:27.440761Z",
+              "timestamp": "2023-08-27T07:39:57.872918Z",
               "name": "AspNetCoreVersion",
               "value": "7.0.10+5a4c82ec57fa"
             },
             {
-              "timestamp": "2023-08-25T17:55:27.440836Z",
+              "timestamp": "2023-08-27T07:39:57.872961Z",
               "name": "NetCoreAppVersion",
               "value": "7.0.10+a6dbb800a477"
             },
             {
-              "timestamp": "2023-08-25T17:55:28.841388Z",
+              "timestamp": "2023-08-27T07:39:59.221587Z",
               "name": "benchmarks/build-time",
-              "value": 1400
+              "value": 1348
             },
             {
-              "timestamp": "2023-08-25T17:55:28.843019Z",
+              "timestamp": "2023-08-27T07:39:59.22331Z",
               "name": "benchmarks/published-size",
               "value": 78872
             },
             {
-              "timestamp": "2023-08-25T17:55:28.844569Z",
+              "timestamp": "2023-08-27T07:39:59.224395Z",
               "name": "benchmarks/symbols-size",
               "value": 0
             },
             {
-              "timestamp": "2023-08-25T17:55:29.027404Z",
+              "timestamp": "2023-08-27T07:39:59.404298Z",
               "name": "benchmarks/start-time",
-              "value": 180
+              "value": 172
             },
             {
-              "timestamp": "2023-08-25T17:55:29.2657564Z",
+              "timestamp": "2023-08-27T07:39:59.6534032Z",
               "name": "http/firstrequest",
-              "value": 230
+              "value": 241
             },
             {
-              "timestamp": "2023-08-25T17:55:59.4315941Z",
+              "timestamp": "2023-08-27T07:42:30.0192169Z",
               "name": "bombardier/requests",
-              "value": 91306
+              "value": 1112009
             },
             {
-              "timestamp": "2023-08-25T17:55:59.4315941Z",
+              "timestamp": "2023-08-27T07:42:30.0192169Z",
               "name": "http/requests",
-              "value": 91306
+              "value": 1112009
             },
             {
-              "timestamp": "2023-08-25T17:55:59.4316085Z",
+              "timestamp": "2023-08-27T07:42:30.0192312Z",
               "name": "bombardier/badresponses",
               "value": 0
             },
             {
-              "timestamp": "2023-08-25T17:55:59.4316085Z",
+              "timestamp": "2023-08-27T07:42:30.0192312Z",
               "name": "http/requests/badresponses",
               "value": 0
             },
             {
-              "timestamp": "2023-08-25T17:55:59.4320792Z",
+              "timestamp": "2023-08-27T07:42:30.0195985Z",
               "name": "bombardier/latency/50",
-              "value": 42.463
+              "value": 27.928
             },
             {
-              "timestamp": "2023-08-25T17:55:59.4320792Z",
+              "timestamp": "2023-08-27T07:42:30.0195985Z",
               "name": "http/latency/50",
-              "value": 42.463
+              "value": 27.928
             },
             {
-              "timestamp": "2023-08-25T17:55:59.4320999Z",
+              "timestamp": "2023-08-27T07:42:30.0196167Z",
               "name": "bombardier/latency/75",
-              "value": 45.662
+              "value": 30.153
             },
             {
-              "timestamp": "2023-08-25T17:55:59.4320999Z",
+              "timestamp": "2023-08-27T07:42:30.0196167Z",
               "name": "http/latency/75",
-              "value": 45.662
+              "value": 30.153
             },
             {
-              "timestamp": "2023-08-25T17:55:59.4321147Z",
+              "timestamp": "2023-08-27T07:42:30.0196311Z",
               "name": "bombardier/latency/90",
-              "value": 49.049
+              "value": 32.627
             },
             {
-              "timestamp": "2023-08-25T17:55:59.4321147Z",
+              "timestamp": "2023-08-27T07:42:30.0196311Z",
               "name": "http/latency/90",
-              "value": 49.049
+              "value": 32.627
             },
             {
-              "timestamp": "2023-08-25T17:55:59.4321291Z",
+              "timestamp": "2023-08-27T07:42:30.019645Z",
               "name": "bombardier/latency/95",
-              "value": 51.57
+              "value": 34.521
             },
             {
-              "timestamp": "2023-08-25T17:55:59.4321291Z",
+              "timestamp": "2023-08-27T07:42:30.019645Z",
               "name": "http/latency/95",
-              "value": 51.57
+              "value": 34.521
             },
             {
-              "timestamp": "2023-08-25T17:55:59.4321481Z",
+              "timestamp": "2023-08-27T07:42:30.019661Z",
               "name": "bombardier/latency/99",
-              "value": 62.191
+              "value": 40.154
             },
             {
-              "timestamp": "2023-08-25T17:55:59.4321481Z",
+              "timestamp": "2023-08-27T07:42:30.019661Z",
               "name": "http/latency/99",
-              "value": 62.191
+              "value": 40.154
             },
             {
-              "timestamp": "2023-08-25T17:55:59.4321623Z",
+              "timestamp": "2023-08-27T07:42:30.0196749Z",
               "name": "bombardier/latency/mean",
-              "value": 42.12997280573018
+              "value": 27.625774544990193
             },
             {
-              "timestamp": "2023-08-25T17:55:59.4321623Z",
+              "timestamp": "2023-08-27T07:42:30.0196749Z",
               "name": "http/latency/mean",
-              "value": 42.12997280573018
+              "value": 27.625774544990193
             },
             {
-              "timestamp": "2023-08-25T17:55:59.4321765Z",
+              "timestamp": "2023-08-27T07:42:30.0196888Z",
               "name": "bombardier/latency/max",
-              "value": 121.766
+              "value": 180.544
             },
             {
-              "timestamp": "2023-08-25T17:55:59.4321765Z",
+              "timestamp": "2023-08-27T07:42:30.0196888Z",
               "name": "http/latency/max",
-              "value": 121.766
+              "value": 180.544
             },
             {
-              "timestamp": "2023-08-25T17:55:59.4321936Z",
+              "timestamp": "2023-08-27T07:42:30.0197026Z",
               "name": "bombardier/rps/max",
-              "value": 15126.521617233802
+              "value": 18234.727057373715
             },
             {
-              "timestamp": "2023-08-25T17:55:59.4321936Z",
+              "timestamp": "2023-08-27T07:42:30.0197026Z",
               "name": "http/rps/max",
-              "value": 15126.521617233802
+              "value": 18234.727057373715
             },
             {
-              "timestamp": "2023-08-25T17:55:59.4322076Z",
+              "timestamp": "2023-08-27T07:42:30.0197165Z",
               "name": "bombardier/rps/mean",
-              "value": 6137.211234788931
+              "value": 9313.259654978587
             },
             {
-              "timestamp": "2023-08-25T17:55:59.4322076Z",
+              "timestamp": "2023-08-27T07:42:30.0197165Z",
               "name": "http/rps/mean",
-              "value": 6137.211234788931
+              "value": 9313.259654978587
             },
             {
-              "timestamp": "2023-08-25T17:55:59.4322588Z",
+              "timestamp": "2023-08-27T07:42:30.0197651Z",
               "name": "bombardier/raw",
               "value": {
                 "spec": {
                   "numberOfConnections": 256,
                   "testType": "timed",
-                  "testDurationSeconds": 15,
+                  "testDurationSeconds": 120,
                   "method": "GET",
-                  "url": "http://localhost:5005/ODataWeatherForecast/Queryable?$select=Id",
+                  "url": "http://localhost:5005/ODataWeatherForecastWithQuery?$select=Id",
                   "body": "",
                   "stream": false,
                   "timeoutSeconds": 2,
                   "client": "fasthttp"
                 },
                 "result": {
-                  "bytesRead": 18717730,
-                  "bytesWritten": 9417702,
-                  "timeTakenSeconds": 15.035328834,
+                  "bytesRead": 406995294,
+                  "bytesWritten": 113437974,
+                  "timeTakenSeconds": 120.0138,
                   "req1xx": 0,
-                  "req2xx": 91306,
+                  "req2xx": 1112009,
                   "req3xx": 0,
                   "req4xx": 0,
                   "req5xx": 0,
                   "others": 0,
                   "latency": {
-                    "mean": 42129.97280573018,
-                    "stddev": 6154.862859610623,
-                    "max": 121766,
+                    "mean": 27625.774544990192,
+                    "stddev": 2652.1891629164547,
+                    "max": 180544,
                     "percentiles": {
-                      "50": 42463,
-                      "75": 45662,
-                      "90": 49049,
-                      "95": 51570,
-                      "99": 62191
+                      "50": 27928,
+                      "75": 30153,
+                      "90": 32627,
+                      "95": 34521,
+                      "99": 40154
                     }
                   },
                   "rps": {
-                    "mean": 6137.211234788931,
-                    "stddev": 3635.528747801915,
-                    "max": 15126.521617233802,
+                    "mean": 9313.259654978587,
+                    "stddev": 3624.3869110904125,
+                    "max": 18234.727057373715,
                     "percentiles": {
-                      "50": 6034.995615,
-                      "75": 9253.643622,
-                      "90": 11718.699405,
-                      "95": 12986.596344,
-                      "99": 13867.267701
+                      "50": 9944.107833,
+                      "75": 12529.143987,
+                      "90": 13268.775213,
+                      "95": 13964.814631,
+                      "99": 15255.653112
                     }
                   }
                 }
               }
             },
             {
-              "timestamp": "2023-08-25T17:55:59.432275Z",
+              "timestamp": "2023-08-27T07:42:30.0197799Z",
               "name": "bombardier/throughput",
-              "value": 1.187244958823942
+              "value": 3.2341360642360355
             },
             {
-              "timestamp": "2023-08-25T17:55:59.432275Z",
+              "timestamp": "2023-08-27T07:42:30.0197799Z",
               "name": "http/throughput",
-              "value": 1.187244958823942
+              "value": 3.2341360642360355
             }
           ]
         ],
@@ -625,8 +628,8 @@
           },
           "presetHeaders": "none",
           "connections": 256,
-          "warmup": 15,
-          "duration": 15,
+          "warmup": 30,
+          "duration": 120,
           "requests": 0,
           "timeout": 2,
           "rate": 0,
@@ -634,7 +637,7 @@
           "serverScheme": "http",
           "serverAddress": "localhost",
           "serverPort": 5005,
-          "path": "/ODataWeatherForecast/Queryable?$select=Id",
+          "path": "/ODataWeatherForecastWithQuery?$select=Id",
           "body": null,
           "bodyFile": null,
           "certFile": null,

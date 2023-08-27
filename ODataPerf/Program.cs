@@ -1,3 +1,5 @@
+#define USE_OPTIMISATIONS
+
 using Microsoft.AspNetCore.OData;
 using Microsoft.AspNetCore.OData.Batch;
 using Microsoft.OData;
@@ -10,8 +12,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 var modelBuilder = new ODataConventionModelBuilder();
 modelBuilder.EntitySet<WeatherForecast>("ODataWeatherForecast");
+modelBuilder.EntitySet<WeatherForecast>("ODataWeatherForecastWithQuery");
 var edmModel = modelBuilder.GetEdmModel();
+
+#if USE_OPTIMISATIONS
 edmModel.MarkAsImmutable();
+#endif
 
 builder.Services.AddControllers()
     .AddOData(opt =>
@@ -20,13 +26,15 @@ builder.Services.AddControllers()
         
         opt.AddRouteComponents("", edmModel, routeServices =>
         {
+            routeServices.AddSingleton<ODataBatchHandler, DefaultODataBatchHandler>();
+#if USE_OPTIMISATIONS
             routeServices.AddSingleton(new ODataMessageWriterSettings
             {
                 Validations = ValidationKinds.None
             });
-            routeServices.AddSingleton<ODataBatchHandler, DefaultODataBatchHandler>();
             routeServices.AddSingleton<IStreamBasedJsonWriterFactory>(_ =>
                 DefaultStreamBasedJsonWriterFactory.Default);
+#endif
         });
     });
 
@@ -34,15 +42,14 @@ builder.Services.AddResponseCompression(options => options.EnableForHttps = true
 
 var app = builder.Build();
 
-// app.MapControllers();
-
 app
     .UseResponseCompression()
+    .UseODataRouteDebug()
     .UseODataQueryRequest()
     .UseODataBatching()
-    .UseRouting()
     .UseAuthentication()
-    .UseAuthorization()
-    .UseEndpoints(routeBuilder => routeBuilder.MapControllers());
+    .UseAuthorization();
+
+app.MapControllers();
 
 app.Run();
