@@ -10,27 +10,30 @@ GET http://localhost:5005/WeatherForecast
 ### odata controller
 GET http://localhost:5005/ODataWeatherForecast
 
-### odata controller
+### odata controller - $select is ignored because the action does not have EnableQueryAttribute
 GET http://localhost:5005/ODataWeatherForecast?$select=Id
 
-### odata controller
+### odata controller that supports querying
 GET http://localhost:5005/ODataWeatherForecastWithQuery
 
-### odata controller
+### odata controller that supports querying
 GET http://localhost:5005/ODataWeatherForecastWithQuery?$select=Id
 
-### odata controller
+### odata controller that supports querying - specifying maxpagesize does nothing because PageSize is not set
 GET http://localhost:5005/ODataWeatherForecastWithQuery?$select=Id
 Prefer: maxpagesize=3
 
-### odata controller
+### odata controller that supports querying - have to use top instead and theres no nextLink
+GET http://localhost:5005/ODataWeatherForecastWithQuery?$top=3&$orderby=Id asc
+
+### odata controller that has PageSize set to 10
 GET http://localhost:5005/ODataWeatherForecastWithPaging
 
-### odata controller
+### odata controller that has PageSize set to 10 but a maximum of 3 items are to be returned
 GET http://localhost:5005/ODataWeatherForecastWithPaging
 Prefer: maxpagesize=3
 
-### odata controller
+### odata controller that has PageSize set to 10 but a maximum of 3 ids are to be returned
 GET http://localhost:5005/ODataWeatherForecastWithPaging?$select=Id
 Prefer: maxpagesize=3
 
